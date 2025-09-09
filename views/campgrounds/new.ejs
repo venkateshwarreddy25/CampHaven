@@ -4,29 +4,40 @@
     <div class="row">
         <h1 class="text-center"></h1>
         <div class="col-6 offset-3"></div>
-       <form action="/campgrounds" method="post">
+       <form action="/campgrounds" method="post" novalidate class="validated-form">
         <div class="mb-3">
             <label class="form-label" for="title">Title</label>
-            <input class="form-control" type="text" id="title" name="campground[title]">
+            <input class="form-control" type="text" id="title" name="campground[title]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
 
         <div class="mb-3">
             <label class="form-label" for="location">Location</label>
-            <input class="form-control"  type="text" id="location" name="campground[location]">
+            <input class="form-control"  type="text" id="location" name="campground[location]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
         <div class="mb-3">
             <label class="form-label" for="image">Image URL</label>
-            <input class="form-control" type="text" id="image" name="campground[image]" value="<%= randomImageUrl %>">
-
+            <input class="form-control" type="text" id="image" name="campground[image]" value="<%= randomImageUrl %>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
 
         
         <div class="mb-3">
             <label class="form-label" for="description">Description</label>
-            <textarea name="campground[description]" id="description" class="form-control"></textarea>
+            <textarea name="campground[description]" id="description" class="form-control" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
 
