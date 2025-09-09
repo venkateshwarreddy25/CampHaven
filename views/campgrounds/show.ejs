@@ -22,8 +22,13 @@
                    </form>
                 </div>
                 <div class="card-footer text-muted">
-                    Posted on <%= campground.createdAt.toDateString() %>
+                    <% if (campground.createdAt) { %>
+                        Posted on <%= campground.createdAt.toDateString() %>
+                    <% } else { %>
+                        Posted date not available
+                    <% } %>
                 </div>
+
 
             </div>
         </div>
